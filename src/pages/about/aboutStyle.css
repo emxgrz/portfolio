@@ -1,0 +1,45 @@
+/* About.css */
+
+.about-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Arimo', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  color: #444;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+strong {
+  color: #0077b6; 
+}
+
+section {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+.about-container p:last-child {
+  margin-bottom: 0;
+}
