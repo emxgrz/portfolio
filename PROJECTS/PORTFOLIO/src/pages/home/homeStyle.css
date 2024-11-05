@@ -1,10 +1,9 @@
-/* homeStyle.css */
-
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Arimo', sans-serif;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -12,32 +11,66 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-  background: linear-gradient(to right, grey 50%, black 50%);
+  background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   color: white;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .content {
   text-align: center;
   width: 80%;
   padding: 2rem;
-  background-color: rgb(255, 255, 255); 
-  /* border-radius: 10px; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .content h1 {
-  font-size: 2.8rem;
-  color: #000000;
+  font-size: 3.2rem;
+  color: #ffffff;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  animation: typing 2s steps(40, end), blink 0.5s step-end infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid rgba(255, 255, 255, 0.75);
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 .content p {
-  font-size: 1.3rem;
-  color: #6b6565;
+  font-size: 1.4rem;
+  color: #d0d0d0;
   margin-bottom: 2rem;
   line-height: 1.6;
+  animation: fadeInText 2s 1.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .content button {
@@ -49,6 +82,7 @@ body, html {
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .content button:hover {
@@ -57,18 +91,36 @@ body, html {
   box-shadow: 0 6px 12px rgba(0, 119, 182, 0.3);
 }
 
+.content button:active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
 .icon-container {
   display: flex;
   gap: 1.6rem;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 2.5rem;
+  animation: fadeInIcons 1s 1.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInIcons {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .icon-container img {
   max-width: 40px;
   max-height: 40px;
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .icon-container img:hover {
@@ -79,7 +131,7 @@ body, html {
 /* Responsive */
 @media (max-width: 768px) {
   .content h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .content p {
