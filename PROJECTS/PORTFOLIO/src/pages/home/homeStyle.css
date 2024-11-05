@@ -1,0 +1,97 @@
+/* homeStyle.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arimo', sans-serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: linear-gradient(to right, grey 50%, black 50%);
+  color: white;
+}
+
+.content {
+  text-align: center;
+  width: 80%;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255); 
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content h1 {
+  font-size: 2.8rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 1.3rem;
+  color: #6b6565;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.content button {
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.content button:hover {
+  transform: scale(1.07);
+  background-color: #005f8a;
+  box-shadow: 0 6px 12px rgba(0, 119, 182, 0.3);
+}
+
+.icon-container {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.icon-container img {
+  max-width: 40px;
+  max-height: 40px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icon-container img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+  }
+
+  .content button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .icon-container {
+    gap: 1rem;
+  }
+}
