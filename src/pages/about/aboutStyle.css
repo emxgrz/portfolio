@@ -1,48 +1,71 @@
 /* aboutStyle.css */
 
-.about-container {
+.about-section {
+  display: flex;
+  align-items: flex-start;
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  max-width: 80%;
+  margin: 2rem auto;
   font-family: 'Arimo', sans-serif;
-  line-height: 1.7;
-  color: #333;
-  background: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
-  border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  color: #f1f1f1;
+  background: rgba(33, 33, 33, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  gap: 2rem; /* Espacio entre imagen y texto */
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #0077b6; /* Color de acento */
-  text-align: center;
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  color: #444;
+.about-image img {
+  width: 600px;
+  height: 700px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-p {
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 2;
+  text-align: left;
+}
+
+.about-text section {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 strong {
-  color: #0077b6; 
+  color: #00b4d8; /* Color de acento */
 }
 
-section {
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-}
+/* Responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-section:last-child {
-  border-bottom: none;
-}
+  .about-image {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+    
+  }
+  .about-image img {
+    width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  }
 
-.about-container p:last-child {
-  margin-bottom: 0;
+  .about-text {
+    text-align: left;
+  }
 }

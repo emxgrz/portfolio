@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import "../pages/contact/contactStyle.css"
+import "./contactForm.css"
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -36,40 +36,40 @@ function ContactForm() {
   };
 
   return (
-    <div className="form-container">
-      <h2>Contact Us</h2>
+    <div>
+      {/* <h2>Contact Us</h2> */}
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Name:</label>
           <input 
             type="text" 
             value={name} 
+            placeholder='write here your name '
             onChange={(e) => setName(e.target.value)} 
             required 
           />
         </div>
         <div>
-          <label>Email:</label>
           <input 
             type="email" 
-            value={email} 
+            value={email}
+            placeholder='here goes your email'
             onChange={(e) => setEmail(e.target.value)} 
             required 
           />
         </div>
         <div>
-          <label>Subject:</label>
           <input 
             type="text" 
             value={subject} 
+            placeholder="what's the matter?"
             onChange={(e) => setSubject(e.target.value)} 
             required 
           />
         </div>
         <div>
-          <label>Message:</label>
           <textarea 
             value={message} 
+            placeholder="anything else you'd like to say?"
             onChange={(e) => setMessage(e.target.value)} 
             required 
           />
