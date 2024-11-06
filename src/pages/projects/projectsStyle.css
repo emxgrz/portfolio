@@ -1,8 +1,98 @@
-.project1 {
-  border: 2px solid black;
-  /* margin-top: 5%; */
-  margin: 5%;
-  margin-top: 7%;
-  cursor: pointer;
+/* projectsStyle.css */
 
+body {
+  font-family: 'Arimo', sans-serif;
+  overflow-x: hidden;
+}
+
+.project1 {
+  background: linear-gradient(135deg, #0077b6, #00aaff);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 90%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.project1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project1 h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project1 h5, .project1 h6 {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Fondo desenfocado al abrir el modal */
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Ventana modal */
+.project-detail {
+  max-width: 600px;
+  width: 90%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  color: #333333;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Detalle del proyecto */
+.project-detail h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 1rem;
+}
+
+.project-detail p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* Botón de cerrar */
+.project-detail button {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-detail button:hover {
+  background-color: #005f8a;
+  transform: scale(1.05);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }

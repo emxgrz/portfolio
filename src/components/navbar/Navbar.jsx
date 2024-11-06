@@ -1,36 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './navbarStyle.css';
+// import './navbarStyle.css';
+import image2 from "../../assets/images/image2.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    // Añadir o quitar la clase que controla el overflow del body
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Evita que el fondo se desplace
+    } else {
+      document.body.style.overflow = 'auto'; // Permite el desplazamiento normal
+    }
+  }, [isOpen]);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+  
   return (
-    <nav className={`navbar navbar-expand-lg custom-navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar navbar-expand-lg custom-navbar ${isOpen ? 'open' : ''}`}>
       <div className="container">
         <Link to="/" className="navbar-brand text-white">
-          LOGO
+          
+          <img src={image2} alt="logo image" style={{width:"18%"}}/>
+          
         </Link>
 
         <button className="navbar-toggler text-white" type="button" onClick={toggleMenu}>
@@ -62,3 +59,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import "../pages/contact/contactStyle.css"
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -17,10 +18,8 @@ function ContactForm() {
       subject,
       message,
     };
-    
 
-    emailjs.init(import.meta.env.VITE_EMAILJS_MY_PUBLIC_KEY); 
-    console.log(import.meta.env.VITE_EMAILJS_MY_PUBLIC_KEY)
+    emailjs.init(import.meta.env.VITE_EMAILJS_MY_PUBLIC_KEY);
 
     emailjs.send(import.meta.env.VITE_EMAILJS_MY_SERVICE_KEY, import.meta.env.VITE_EMAILJS_MY_TEMPLATE_KEY, templateParams)
       .then((response) => {
@@ -37,7 +36,7 @@ function ContactForm() {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div>

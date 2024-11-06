@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import "./projectsStyle.css"
+import "./projectsStyle.css";
 
 const ProjectList = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -23,14 +23,14 @@ const ProjectList = () => {
   ];
 
   return (
-    <div style={{ position: 'relative'}}>
+    <div style={{ position: 'relative', paddingTop: '4rem' }}>
       {items.map(item => (
         <motion.div 
           key={item.id}
           layoutId={item.id}
           onClick={() => setSelectedId(item.id)}
           className="project1"
-          whileHover={{ scale: 1.05 }} 
+          whileHover={{ scale: 1.05 }}
         >
           <motion.h2>{item.title}</motion.h2>
           <motion.h5>{item.subtitle}</motion.h5>
@@ -40,43 +40,21 @@ const ProjectList = () => {
 
       <AnimatePresence>
         {selectedId && (
-          <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)', 
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            zIndex: 10
-          }}>
+          <div className="project-modal-overlay">
             <motion.div 
               layoutId={selectedId} 
               className="project-detail"
               initial={{ opacity: 0, scale: 0.8 }} 
               animate={{ opacity: 1, scale: 1 }} 
-              exit={{ opacity: 0, scale: 0.8 }} 
-              style={{
-                backgroundColor: 'white',
-                padding: '20px',
-                margin: "20px",
-                borderRadius: '10px',
-                boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
-                zIndex: 20
-              }}
+              exit={{ opacity: 0, scale: 0.8 }}
             >
               {items.find(item => item.id === selectedId) && (
                 <>
-                  {/* <motion.h5>{items.find(item => item.id === selectedId).subtitle}</motion.h5> PONER FOTOS, DESCRIPCIÓN DEL PROYECTO EN LA CARTA*/}
                   <motion.h2>{items.find(item => item.id === selectedId).title}</motion.h2>
                   <motion.p>
                     {items.find(item => item.id === selectedId).description}
                   </motion.p>
-                  <motion.button 
-                    onClick={() => setSelectedId(null)}
-                  >
+                  <motion.button onClick={() => setSelectedId(null)}>
                     Cerrar
                   </motion.button>
                 </>
