@@ -10,7 +10,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
@@ -24,10 +24,12 @@ body, html {
 }
 
 .content {
+  margin-top: -5%;
   text-align: center;
   width: 80%;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  height: 60%;
+  padding: 4rem;
+  background-color: rgba(255, 255, 255, 0.1); 
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -76,10 +78,10 @@ body, html {
 .content button {
   padding: 0.8rem 1.8rem;
   font-size: 1rem;
-  background-color: #0077b6;
+  background-color: transparent;
   color: #fff;
-  border: none;
-  border-radius: 8px;
+  border: 2px solid white;
+  border-radius: 2px;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
@@ -112,8 +114,8 @@ body, html {
 }
 
 .icon-container img {
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 55px;
+  max-height: 55px;
   transition: transform 0.3s, box-shadow 0.3s;
   animation: floatIcon 3s ease-in-out infinite;
 }
@@ -131,7 +133,11 @@ body, html {
 /* Responsive */
 @media (max-width: 768px) {
   .content h1 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+  }
+  .content {
+    height: auto;
+    margin-top: auto;
   }
 
   .content p {
