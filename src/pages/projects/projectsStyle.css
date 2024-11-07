@@ -5,6 +5,13 @@
   flex-wrap: wrap;
 }
 
+
+
+html, body {
+  height: 100vh;   margin: 0; }
+
+
+
 .project-item {
   display: flex;
   flex-direction: column;
