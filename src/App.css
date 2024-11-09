@@ -1,10 +1,47 @@
 #root {
   margin: 0 auto;
-  /* text-align: center; */
-  /* background-color: rgba(207, 206, 206, 0.751); */
+  text-align: center;
+  line-height: 1.5;
+  height: 100%;
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 1; 
+}
+
+.footer {
+  background-color: #202020;
+  border-top: 3px solid #e23636;
+  font-family: "Bangers", system-ui;
+  letter-spacing: 1.2px;
+  display: block;
+  margin-bottom: 0;
+  margin-top: auto;
+  padding: 25px !important;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #e23636 !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer a:hover {
+  color: #FFDE21 !important;
+}
 
 
 
