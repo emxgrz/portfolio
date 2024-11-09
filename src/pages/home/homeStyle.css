@@ -124,7 +124,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .content h1 {
     font-size: 1.2rem;
@@ -146,4 +145,9 @@
   .icon-container {
     gap: 1rem;
   }
+  
+  .main-content {
+    margin-top: 7rem;
+  }
+
 }

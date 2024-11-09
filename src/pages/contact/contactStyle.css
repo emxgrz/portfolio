@@ -1,14 +1,13 @@
-/* contactStyle.css */
-
 .contact-container {
   padding: 2.5rem;
   max-width: 800px;
-  margin: 2rem auto;
   text-align: center;
   color: #f1f1f1;
-  background: rgba(50, 50, 50, 0.95); /* Fondo más oscuro */
+  background: rgba(50, 50, 50, 0.95); 
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 12vh; 
+
 }
 
 h2 {
@@ -67,7 +66,6 @@ input:focus, textarea:focus {
 
 button {
   padding: 0.8rem 1.5rem;
-  /* background-color: #0077b6; */
   background-color: transparent;
   border: 2px solid white;
   color: white;
@@ -82,7 +80,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Responsivo para dispositivos móviles */
 @media (max-width: 768px) {
   .contact-links {
     flex-direction: column;

@@ -29,7 +29,7 @@ function About() {
       >
         <section>
           <p>
-          Hi! I’m <strong>Emma</strong>, a 22-year-old Full-Stack Developer with a deep passion for technology and a solid foundation in web development. I recently completed an intensive Full-Stack Web Development bootcamp at Ironhack, where I gained hands-on experience in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Through this experience, I developed a developer’s mindset: solving problems, adapting quickly, and tackling new challenges head-on.
+          Hi! I’m <strong>Emma</strong>, a 22-year-old Full-Stack Developer with a deep passion for technology and a solid foundation in web development. I recently completed an intensive Full-Stack Web Development bootcamp at Ironhack, where I gained hands-on experience in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Through this experience, I formed a developer’s mindset: solving problems, adapting quickly, and tackling new challenges head-on.
           </p>
         </section>
         <section>

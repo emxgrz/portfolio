@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import "./contactForm.css"
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -37,13 +36,12 @@ function ContactForm() {
 
   return (
     <div>
-      {/* <h2>Contact Us</h2> */}
       <form onSubmit={handleSubmit}>
         <div>
           <input 
             type="text" 
             value={name} 
-            placeholder='write here your name '
+            placeholder='write here your name 🖊️'
             onChange={(e) => setName(e.target.value)} 
             required 
           />
@@ -52,7 +50,7 @@ function ContactForm() {
           <input 
             type="email" 
             value={email}
-            placeholder='here goes your email'
+            placeholder='here goes your email ✉️'
             onChange={(e) => setEmail(e.target.value)} 
             required 
           />
@@ -61,7 +59,7 @@ function ContactForm() {
           <input 
             type="text" 
             value={subject} 
-            placeholder="what's the matter?"
+            placeholder="what's the matter? 📄"
             onChange={(e) => setSubject(e.target.value)} 
             required 
           />
@@ -69,12 +67,12 @@ function ContactForm() {
         <div>
           <textarea 
             value={message} 
-            placeholder="anything else you'd like to say?"
+            placeholder="anything else you'd like to say? ⌨️"
             onChange={(e) => setMessage(e.target.value)} 
             required 
           />
         </div>
-        <button type="submit">Send</button>
+        <button type="submit">Send 📤</button>
       </form>
       {status && <p>{status}</p>}
     </div>

@@ -1,17 +1,18 @@
-/* aboutStyle.css */
 
 .about-section {
   display: flex;
   align-items: flex-start;
   padding: 2rem;
   max-width: 80%;
-  margin: 6rem auto;
   font-family: 'Arimo', sans-serif;
   color: #f1f1f1;
   background: rgba(33, 33, 33, 0.9);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  gap: 2rem; /* Espacio entre imagen y texto */
+  gap: 2rem; 
+  margin-bottom: 2rem;
+  margin-top: 12vh; 
+
 }
 
 .about-image {
@@ -25,6 +26,7 @@
   height: 700px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  border: 2px solid white
 }
 
 .about-image img:hover {
@@ -52,6 +54,7 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
   }
 
   .about-image {
@@ -95,8 +98,9 @@ strong {
 
 @media (max-width: 1024px) {
   .about-image img {
-    width: 400px;
+    width: 440px;
     height: 500px;
+
   }
 }
 @media (max-width: 768px) {
