@@ -5,7 +5,7 @@
   align-items: flex-start;
   padding: 2rem;
   max-width: 80%;
-  margin: 2rem auto;
+  margin: 6rem auto;
   font-family: 'Arimo', sans-serif;
   color: #f1f1f1;
   background: rgba(33, 33, 33, 0.9);
@@ -43,10 +43,62 @@
 }
 
 strong {
-  color: #00b4d8; /* Color de acento */
+  color: #00b4d8; 
 }
 
-/* Responsivo para dispositivos móviles */
+
+@media (max-width: 1400px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    order: 1; 
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text {
+    order: 2;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text {
+    order: 2; 
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 250px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-image img {
+    width: 400px;
+    height: 500px;
+  }
+}
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
@@ -60,9 +112,9 @@ strong {
     
   }
   .about-image img {
-    width: 200px;
+    width: 170px;
   height: 200px;
-  border-radius: 50%;
+  border: 2px solid white
   }
 
   .about-text {

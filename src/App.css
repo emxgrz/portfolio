@@ -22,25 +22,26 @@ html, body {
   flex: 1; 
 }
 
+
 .footer {
   background-color: #202020;
-  border-top: 3px solid #e23636;
+  border-top: 3px solid #ffffff;
   font-family: "Bangers", system-ui;
   letter-spacing: 1.2px;
   display: block;
   margin-bottom: 0;
   margin-top: auto;
-  padding: 25px !important;
+  padding: 25px;
 }
 
 .footer a {
   text-decoration: none;
-  color: #e23636 !important;
+  color: #ffffff;
   transition: color 0.2s ease-in-out;
 }
 
 .footer a:hover {
-  color: #FFDE21 !important;
+  background-color: #005f8a;
 }
 
 

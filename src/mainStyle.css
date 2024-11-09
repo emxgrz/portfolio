@@ -1,5 +1,10 @@
 
 html, body {
   background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+  background-position: cover;
+  font-family: 'Arimo', sans-serif;
+  height: auto;
+  
+
 }
 
