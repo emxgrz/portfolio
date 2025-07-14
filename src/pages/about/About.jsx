@@ -28,7 +28,7 @@ function About() {
       >
         <section>
           <p>
-            Hi! I’m <strong>Emma</strong>, a 23-year-old Full-Stack Developer
+            Hi! I’m <strong>Emma</strong>, a 23-year-old Software Developer
             passionate about technology and software development. I have
             hands-on experience with a variety of technologies including HTML,
             CSS, Typecript, JavaScript, React, Node.js, Express, and MongoDB.
