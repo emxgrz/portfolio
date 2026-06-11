@@ -1,0 +1,185 @@
+/**
+ * Global Styles
+ * Includes font definitions and base styles
+ */
+
+/* Import Press Start 2P font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Press Start 2P", monospace;
+  background-color: #0a0e27;
+  color: #3a86ff;
+  overflow: hidden;
+}
+
+/* Base colors for Stranger Things theme */
+:root {
+  --color-deep-black: #0a0e27;
+  --color-neon-red: #ff006e;
+  --color-neon-blue: #00d9ff;
+  --color-electric-purple: #8338ec;
+  --color-neon-green: #3a86ff;
+  --color-accent-yellow: #ffbe0b;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Grid unit for pixel art */
+  --grid-unit: 16px;
+
+  /* Animation timing */
+  --animation-fps-frame: 16.67ms; /* 60 FPS */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neon-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-blue);
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-electric-purple);
+  color: var(--color-white);
+}
+
+/* Button styling defaults */
+button,
+input[type="button"],
+input[type="submit"] {
+  font-family: "Press Start 2P", monospace;
+  cursor: pointer;
+}
+
+/* Input styling defaults */
+input,
+textarea,
+select {
+  font-family: "Press Start 2P", monospace;
+  background-color: var(--color-deep-black);
+  color: var(--color-neon-green);
+  border: 2px solid var(--color-neon-green);
+  padding: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-neon-blue);
+  box-shadow: 0 0 10px var(--color-neon-blue);
+}
+
+/* Disable tap highlight on mobile */
+input,
+button,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Utility classes for animations */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px var(--color-neon-green);
+  }
+  50% {
+    text-shadow:
+      0 0 10px var(--color-neon-green),
+      0 0 20px var(--color-neon-blue);
+  }
+  100% {
+    text-shadow: 0 0 5px var(--color-neon-green);
+  }
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.glow {
+  animation: glow 1s ease-in-out infinite;
+}
+
+.blink {
+  animation: blink 0.5s step-end infinite;
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Prevent double-tap zoom on mobile */
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* Responsive text sizing */
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* Mobile touch area sizing */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
